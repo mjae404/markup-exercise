@@ -1,0 +1,56 @@
+.contact {
+    &_area {
+        width: 100%;
+        padding: 50px 0 100px;
+        background: url("../img/contact_bg.jpg") no-repeat center center / cover;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+
+        @media screen and (min-width:768px) {
+            padding: 80px 30px 154px;
+        }
+    } // .contact_area
+
+    &_title {
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: 700;
+
+        @media screen and (min-width:768px) {
+            margin-bottom: 60px;
+        }
+    } // .contact_title
+
+    &_email {
+        display: block;
+        margin: 0 0 20px 0;
+        font-size: 20px;
+        word-break: break-all;
+
+        @media screen and (min-width:768px) {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            font-size: 28px;
+            vertical-align: middle;
+        }
+
+        &_area {
+            line-height: 1.14;
+        } // .contact_email_area
+
+        &_button {
+            display: inline-block;
+            padding: 17px;
+            border-radius: 38px;
+            background-color: #ad8e80;
+            color: #fff;
+            font-size: 16px;
+            vertical-align: middle;
+
+            @media screen and (min-width:768px) {
+                min-width: 215px;
+            }
+        } // .contact_email_button
+    } // .contact_email
+}

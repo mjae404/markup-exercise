@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜딩 페이지 - Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+    <header id="header" class="header">
+        <h1 class="blind">랜딩 페이지 - Coffee</h1>
+        <div class="inner">
+            <div class="logo">
+                @@include('include/_logo.html')
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="introduce_area">
+            <h2 class="blind">About Coffee</h2>
+            <div class="introduce_visual_area">
+                <div class="introduce_visual_wrap">
+                    <div class="inner">
+                        <div class="introduce_visual_title">
+                            <span class="introduce_visual_title_text">
+                                <span>Etiam laoreet</span>
+                                <span>elit</span>
+                            </span>
+                            <span class="introduce_visual_title_text">
+                                <span>in tortor</span>
+                                <span>laoreet</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="introduce_detail_container inner">
+                @@include('include/_introduce_detail.html', {
+                    introduceDetailList: [
+                        {direction: "", img:"introduce01.jpg", alt: "임시 이미지", title: "Vestibulum non nisi quis erat aliquet pellentesque", text: "Curabitur nec consectetur augue, id convallis nibh. Cras augue tortor, ornare vitae molestie a, mollis iaculis tellus. Quisque et ornare sapien."},
+                        {direction: "reverse", img:"introduce02.jpg", alt: "임시 이미지", title: "Ut euismod leo sit amet odio finibus maximus", text: "Sed eleifend, erat et tincidunt elementum, massa ligula posuere magna, non gravida massa leo eu lacus."},
+                        {direction: "", img:"introduce03.jpg", alt: "임시 이미지", title: "Nulla et lorem auctor", text: "Nulla vitae augue posuere, vestibulum velit vitae, fermentum sapien. Aenean sed commodo lorem, vitae porttitor nisi."}
+                    ]
+                })
+            </div>
+        </section>
+        <section class="signup_area">
+            <h2 class="blind">Sign Up</h2>
+            <div class="inner">
+                <p class="signup_text">Aliquam eu leo efficitur, porttitor libero id.</p>
+                <a href="#" class="signup_link" target="_self">Sign up for free!</a>
+            </div>
+        </section>
+        <section class="product_area">
+            <div class="inner">
+                <h2 class="product_title">Lorem Ipsum</h2>
+                <p class="product_text">Phasellus porttitor quis dolor ac commodo. Donec in vulputate turpis.</p>
+                <div class="product_detail_area reverse">
+                    <div class="product_image_area">
+                        <img src="./img/product.jpg" class="product_image" alt="임시 이미지">
+                    </div>
+                    <div class="product_text_area text_show">
+                        <strong class="product_info_title">pharetra elit et, tincidunt enim.</strong>
+                        <ul class="product_info_list">
+                            <li class="product_info_item">Duis faucibus ullamcorper urna, sed vehicula lorem ullamcorper ut.</li>
+                            <li class="product_info_item">Cras accumsan, lorem eu varius pellentesque.</li>
+                            <li class="product_info_item">eget turpis. Vivamus sed dolor ligula.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact_area">
+            <div class="inner">
+                <h2 class="contact_title">Contact us</h2>
+                <div class="contact_email_area">
+                    <span class="contact_email">coffee@coffee.com</span>
+                    <a href="#" class="contact_email_button" target="_blank">Send email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="inner">
+            <p class="copyright">&copy; coffee. All rights reserved.</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
