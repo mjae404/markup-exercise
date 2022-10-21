@@ -1,0 +1,16 @@
+<ul class="showcase_detail_list">
+    @@for (var i = 0; i < shocaseDetailList.length; i++) {
+        <li class="showcase_detail_item">
+            <a href="#" class="showcase_detail_link">
+                <div class="showcase_detail_img_wrap">
+                    <img src="./img/`+shocaseDetailList[i].img+`" class="showcase_detail_img" alt="`+shocaseDetailList[i].alt+`">
+                    <div class="showcase_detail_overlay"></div>
+                </div>
+                <div class="showcase_detail_title_wrap">
+                    <h3 class="showcase_detail_title">`+shocaseDetailList[i].title+`</h3>
+                    <p class="showcase_detail_text">`+shocaseDetailList[i].text+`</p>
+                </div>
+            </a>
+        </li>
+    }
+</ul>
