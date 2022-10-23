@@ -109,7 +109,7 @@
                 &_wrap {
                     transform: scale(0.95);
                     transform-origin: center center;
-                }
+                } // .showcase_detail_img_wrap
             }
         }
     } // .showcase_detail_link
@@ -135,12 +135,10 @@
     } // .showcase_detail_img_wrap
 
     &_overlay {
+        @include position(absolute, 0, null, null, 0);
         background: #fff;
         width: 100%;
         height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
         z-index: 2;
         opacity: 1;
         transform: skew(0, 0) scale(1) translate(0, 0);

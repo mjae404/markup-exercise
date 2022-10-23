@@ -13,15 +13,10 @@
   max-height: ($line-height * $lines);
 }
 
-@mixin background {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-@mixin position-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }

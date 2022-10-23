@@ -25,3 +25,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
