@@ -27,7 +27,7 @@
 
 ---
 
-004. 교보문고 부트캠프 팀 과제
+## 004. 교보문고 부트캠프 팀 과제
 - __skills__: HTML5, CSS3, javascript, scss, gulp, git
 - 컨셉: 교보문고 사이트중 개선 필요한 서비스 개선 (부트캠프용 과제이므로 실질적으로 운영에 반영 안함)
 - [DEMO](http://mjaedot.com/kyobo_bootcamp/)
