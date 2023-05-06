@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 웰컴 클릭 유도 배너</title>
+    <link rel="shortcut icon" href="./img/fav.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile_page.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <script src="js/swiper.js"></script>
+    <script src="js/mobile_page.js" defer></script>
+    <script src="js/scroll_banner.js" defer></script>
+</head>
+<body>
+<div class="task_container">
+    <header class="header">
+        <div class="header_area">
+            <div class="header_logo_wrap">
+                <img src="./img/logo.png" alt="교보문고 로고" class="header_logo">
+                <button type="button" class="header_site_more_button">
+    <span class="blind">사이트 더보기</span>
+</button>
+<ul class="header_site_more_list">
+    <li class="header_site_more_item kyobobook">
+        <a href="#" class="header_site_more_link">교보문고</a>
+    </li>
+    <li class="header_site_more_item kyobo-store">
+        <a href="#" class="header_site_more_link">매장안내</a>
+    </li>
+    <li class="header_site_more_item ebook">
+        <a href="#" class="header_site_more_link">ebook</a>
+    </li>
+    <li class="header_site_more_item ebook-sam">
+        <a href="#" class="header_site_more_link">sam</a>
+    </li>
+    <li class="header_site_more_item tocsoda">
+        <a href="#" class="header_site_more_link">웹소설 톡소다</a>
+    </li>
+    <li class="header_site_more_item used">
+        <a href="#" class="header_site_more_link">중고장터</a>
+    </li>
+    <li class="header_site_more_item morning">
+        <a href="#" class="header_site_more_link">북모닝</a>
+    </li>
+    <li class="header_site_more_item story">
+        <a href="#" class="header_site_more_link">스토리</a>
+    </li>
+</ul>
+            </div>
+            <div class="header_search_wrap">
+                <input type="text" class="header_search_input" placeholder="검색어를 입력하세요">
+                <button type="button" class="header_search_button">
+                    <span class="blind">검색</span>
+                </button>
+            </div>
+            <div class="header_button_wrap">
+                <a href="#" class="header_button_cart">
+                    <span class="blind">장바구니</span>
+                </a>
+            </div>
+        </div>
+        <div class="header_category_area">
+    <nav class="header_category">
+        <ul class="header_category_list">
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">홈</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">Picks</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">베스트</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">이벤트</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">신상품</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">기프트</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">스토리:K</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">오늘의책</span>
+                </button>
+            </li>
+            <li class="header_category_item">
+                <button type="button" class="header_category_button">
+                    <span class="header_category_text">사은품</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+    </header>
+    <div class="banner_wrap active">
+        <div class="banner_area">
+            <a href="#" class="banner_link">
+                <div class="banner_img_area">
+                    <img src="./img/thumbnail_event01.png" class="banner" alt="이달의 추천 새 책 타이백 북백">
+                </div>
+            </a>
+        </div>
+        <div class="banner_close_area">
+            <button type="button" id="bannerCloseButton" class="banner_close_button">닫기 버튼</button>
+        </div>
+    </div>
+    <div class="swiper_main_wrap">
+        <div class="swiper swiper_main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-color: #0b70cc;">
+                    <img src="./img/slide_img01.jpg" alt="계절로 보는 그림책: 여름 / 이수지 작가 굿즈 2종">
+                </div>
+                <div class="swiper-slide" style="background-color: #6a8011;">
+                    <img src="./img/slide_img02.jpg" alt="열공꿀팁 대방출 공모전 / 통합 포인트 20만원!">
+                </div>
+                <div class="swiper-slide" style="background-color: #018168;">
+                    <img src="./img/slide_img03.jpg" alt="지구를 살리는 Re-Stand / 가치를 소비하다 #실용적 #예쁨주의">
+                </div>
+            </div>
+            <div class="swiper_button_wrap">
+                <div class="swiper_button_pagination">
+                    <div class="swiper-pagination"></div>
+                    <button type="button" class="swiper_button_all">
+                        <span class="blind">모두 보기</span>
+                    </button>
+                </div>
+                <div class="swiper_button_play_wrap">
+                    <button type="button" class="swiper_button_play on">
+                        <span class="blind">재생</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="quick_tab_wrap">
+        <ul class="quick_tab_list">
+    <li class="quick_tab_item benefit">
+        <a href="#" class="quick_tab_link">할인혜택</a>
+    </li>
+    <li class="quick_tab_item chulcheck">
+        <a href="#" class="quick_tab_link">출석체크</a>
+    </li>
+    <li class="quick_tab_item shop">
+        <a href="#" class="quick_tab_link">매장</a>
+    </li>
+    <li class="quick_tab_item pickup">
+        <a href="#" class="quick_tab_link">바로드림</a>
+    </li>
+    <li class="quick_tab_item checkin">
+        <a href="#" class="quick_tab_link">체크인</a>
+    </li>
+    <li class="quick_tab_item gift">
+        <a href="#" class="quick_tab_link">사은품</a>
+    </li>
+    <li class="quick_tab_item collection">
+        <a href="#" class="quick_tab_link">문장수집</a>
+    </li>
+    <li class="quick_tab_item bookstore">
+        <a href="#" class="quick_tab_link">이달의책</a>
+    </li>
+    <li class="quick_tab_item ebook">
+        <a href="#" class="quick_tab_link">e북</a>
+    </li>
+    <li class="quick_tab_item all">
+        <a href="#" class="quick_tab_link">전체보기</a>
+    </li>
+</ul>
+    </div>
+    <div class="hot_word_wrap">
+        <div class="hot_word_title">
+            <span class="hot_word_text">지금 핫!</span>
+            <strong class="hot_word_text">실시간 검색어</strong>
+        </div>
+        <div class="hot_word_list_wrap">
+            <ul class="hot_word_list">
+    <li class="hot_word_item current">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking em">1</span> 헤어질 결심 각본
+        </a>
+    </li>
+    <li class="hot_word_item next">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking em">2</span> 계속 가봅시다 남는 게 체력인데
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking em">3</span> 벌거벗은세계사: 전쟁편
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">4</span> 변화하는 세계 질서
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">5</span> 누구에게나 공부하고 싶은 순간은 온다
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">6</span> 나를 향해 걷는 열 걸음
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">7</span> 때로는 행복 대신 불행을 택하기도 한다
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">8</span> 지구는 괜찮아, 우리가 문제지
+        </a>
+    </li>
+    <li class="hot_word_item">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">9</span> 내가 같이 뛰어내려 줄게
+        </a>
+    </li>
+    <li class="hot_word_item prev">
+        <a href="#" class="hot_word_link">
+            <span class="hot_word_ranking">10</span> 계속 가보겠습니다
+        </a>
+    </li>
+</ul>
+        </div>
+    </div>
+    <section class="book_list_wrap">
+    <h2 class="section_title">책 리스트</h2>
+    <div class="swiper_book_list_container">
+        <div class="swiper swiper_book_list_wrap">
+            <ul class="swiper-wrapper book_list">
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book01.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데 계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book02.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book03.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book04.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book05.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book06.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+    <section class="book_list_wrap">
+    <h2 class="section_title">책 리스트</h2>
+    <div class="swiper_book_list_container">
+        <div class="swiper swiper_book_list_wrap">
+            <ul class="swiper-wrapper book_list">
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book01.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데 계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book02.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book03.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book04.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book05.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book06.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+    <section class="book_list_wrap">
+    <h2 class="section_title">책 리스트</h2>
+    <div class="swiper_book_list_container">
+        <div class="swiper swiper_book_list_wrap">
+            <ul class="swiper-wrapper book_list">
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book01.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데 계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book02.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book03.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book04.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book05.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book06.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+    <section class="book_list_wrap">
+    <h2 class="section_title">책 리스트</h2>
+    <div class="swiper_book_list_container">
+        <div class="swiper swiper_book_list_wrap">
+            <ul class="swiper-wrapper book_list">
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book01.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데 계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book02.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book03.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book04.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book05.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide book_list_item">
+                    <a href="#" class="book_list_link">
+                        <div class="book_list_thumbnail_wrap">
+                            <img src="./img/thumbnail_book06.jpeg" class="book_list_thumbnail" alt="">
+                        </div>
+                        <div class="book_list_title_wrap">
+                            <strong class="book_list_title">계속 가봅시다 남는게 체력인데</strong>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</section>
+    <div class="navbar_container">
+    <nav class="navbar_wrap">
+        <ul class="navbar_list">
+            <li class="navbar_item all">
+                <a href="#" class="navbar_link">
+                    <span class="blind">전체메뉴 보기</span>
+                </a>
+            </li>
+            <li class="navbar_item search">
+                <a href="#" class="navbar_link">
+                    <span class="blind">검색</span>
+                </a>
+            </li>
+            <li class="navbar_item home">
+                <a href="#" class="navbar_link">
+                    <span class="blind">홈</span>
+                </a>
+            </li>
+            <li class="navbar_item mypage">
+                <a href="#" class="navbar_link">
+                    <span class="blind">마이 페이지</span>
+                </a>
+            </li>
+            <li class="navbar_item product">
+                <a href="#" class="navbar_link">
+                    <div class="navbar_thumbnails" style="background-image: url('./img/thumbnail_book01.jpeg')"></div>
+                    <span class="blind">최근본 상품</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</div>
+<script>
+
+</script>
+</body>
+</html>

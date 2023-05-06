@@ -1,0 +1,643 @@
+@import "include/variables"; // 변수
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Yeseva+One&family=Poppins:wght@300;400;800&display=swap');
+
+.animation {
+    &_section {
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    } // .animation_section
+
+    &_content_wrap {
+        position: relative;
+        font-weight: bold;
+        font-size: 60px;
+        word-break: break-all;
+        font-family: 'Poppins', sans-serif;
+    } // .animation_content_wrap
+
+    &_title {
+        margin-bottom: 10px;
+    } // .animation_title
+
+
+    /* 텍스트 */
+    // 타이핑 효과
+    &_typing_text {
+        border-right: 0.08em solid $black; 
+    } // .animation_typing_text
+
+    // 그라디언트 효과
+    &_gradient_text {
+        color: #f35626;
+        background-image: linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: hue 10s infinite linear;
+
+        @keyframes hue {
+            from {
+                -webkit-filter: hue-rotate(0deg);
+            }
+            to {
+                -webkit-filter: hue-rotate(-360deg);
+            }
+        }
+    } // .animation_gradient_text
+    
+    // 반복 그라디언트 효과
+    &_gradient_move_text {
+        font-size: 60px;
+        background-image: linear-gradient(90deg, rgba(94,114,235,1) 0%, rgba(255,145,144,1) 56%, rgba(254,193,149,1) 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        animation: gradientmove 1s infinite;
+
+        @keyframes gradientmove {
+            50% {
+                background-image: linear-gradient(262deg, rgba(94,114,235,1) 0%, rgba(255,145,144,1) 56%, rgba(254,193,149,1) 100%);
+            }
+        }
+    } // .animation_gradient_move_text
+
+    // 라이너 컬러 체인지 효과
+    &_linear_text {
+        position: relative;
+        color: rgba(0, 0, 0, .3);
+        word-break: keep-all;
+        font-size: 32px;
+        font-weight: bold;
+
+        @media screen and (min-width: 768px) {
+            font-size: 60px;
+        }
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            max-width: 7em;
+            white-space: nowrap;
+            word-break: break-all;
+            color: $point;
+            animation: lineartext 8s linear infinite;
+
+            @keyframes lineartext {
+                0% {
+                    max-width: 0;
+                }
+            }
+        }
+    } // .animation_linear_text
+
+    // 샤이닝 효과
+    &_shining_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        overflow: hidden;
+        background-image: linear-gradient(90deg, $black, $white, $black);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        animation: shining 3s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+        &_wrap {
+            position: relative;
+            background-color: $black;
+            padding: 0 20px;
+            min-height: 350px;
+            width: 100%;
+            box-sizing: border-box;
+        } // .animation_shining_text_wrap
+
+        @keyframes shining {
+            0% {
+                background-position: -500%;
+            }
+            100% {
+                background-position: 500%;
+            }
+        }
+    } // .animation_shining_text
+
+    // glitch 테스트 효과
+    &_glitch_text {
+        width: 100%;
+        min-height: 350px;
+        background-color: black;
+
+        &_wrapp {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } // .animation_glitch_text_wrap
+
+        .glitch {
+            text-decoration: none;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            color: #fff;
+            letter-spacing: 5px;
+            
+            &::before,
+            &::after {
+                display: block;
+                content: attr(data-glitch);
+                text-transform: uppercase;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: .8;
+            }
+
+            &::after {
+                color: #f0f;
+                z-index: -2;
+                animation: glitch .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+            }
+
+            &::before {
+                color: #0ff;
+                z-index: -1; 
+                animation: glitch .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+            }
+        }
+        
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-5px, 5px);
+            }
+
+            40% {
+                transform: translate(-5px, -5px);
+            }
+
+            60% {
+                transform: translate(5px, 5px);
+            }
+
+            80% {
+                transform: translate(5px, -5px);
+            }
+
+            to {
+                transform: translate(0);
+            }
+        }
+    } // .animation_glitch_text
+
+    // 그림자 텍스트 효과
+    &_shadow_text {
+        &_wrap {
+            background: #e6eaad;
+            display: flex;
+            flex-direction: column;
+            min-height: 350px;
+            justify-content: center;
+            align-items: center;
+        } // .animation_shadow_text_wrap
+
+        .words {
+            color: #e6eaad;
+            font-size: 0;
+            line-height: 1.5;
+
+            span {
+                font-size: 60px;
+                display: inline-block;
+                animation: move 3s ease-in-out infinite;
+
+                &:nth-child(2) {
+                    animation-delay: 0.5s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 1s;
+                }
+
+                &:nth-child(4) {
+                    animation-delay: 1.5s;
+                }
+
+                &:nth-child(5) {
+                    animation-delay: 2s;
+                }
+
+                &:nth-child(6) {
+                    animation-delay: 2.5s;
+                }
+
+                &:nth-child(7) {
+                    animation-delay: 3s;
+                }
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-30%, 0);
+            }
+            50% {
+                text-shadow: 0 25px 50px rgba(0, 0, 0, 0.75);
+            }
+            100% {
+                transform: translate(30%, 0);
+            }
+        }
+    } // .animation_shadow_text
+
+    // 네온사인 효과
+    &_sign_text {
+        &_wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background: $black;
+            font-family: 'Yeseva One', cursive;
+            font-size: 50px;
+            min-height: 350px;
+        } // .animation_sign_text_wrap
+
+        .title {
+            font-size: 110px;
+        }
+
+        .blink {
+            animation: blink 0.01s infinite alternate;
+        }
+
+        .fade {
+            opacity: 0.8;
+            color: #ebffff;
+            text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #e4e9ac, 0 0 50px #e4e9ac;
+            animation: fade 3s infinite alternate;
+        }
+
+        .neon {
+            &_main {
+                margin: 0 auto;
+                text-align: center;
+                color: #ebffff;
+                text-shadow: 2px 2px 1px rgba(0,0,0,0.3), 0 0px 15px #fff, 0 0 10px #e4e9ac, 0 0 50px #e4e9ac;
+            } // .neon_main
+
+            &_sub {
+                font-family: 'League Script', sans-serif;
+                font-size: 100px;
+                margin: 0 auto;
+                text-align: center;
+                color: #ccf;
+                text-shadow: 2px 2px 1px rgba(0,0,0,0.5), 0 0 20px #fff, 0 0 10px #003770, 0 0 50px #003770;
+            } // .neon_sub
+        }
+
+        @keyframes blink {
+            70% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes fade {
+            40% {
+                opacity: 0.8;
+            }
+            42% {
+                opacity: 0.1;
+            }
+            43% {
+                opacity: 0.8;
+            }
+            45% {
+                opacity: 0.1;
+            }
+            46% {
+                opacity: 0.8;
+            }
+        }
+    } // .animation_sign_text
+
+    // 라이트 텍스트 효과
+    &_light_text {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 0.75;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &_wrap {
+            position: relative;
+            background: #000;
+            padding: 2rem;
+            min-height: 350px;
+        } // .animation_light_text_wrap
+
+        span {
+            display: block;
+
+            &:not(.light) {
+                opacity: 0;
+                animation: flashText .5s ease-out alternate infinite;
+            }
+
+            &.light {
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: -10%;
+                    width: 100%;
+                    height: 120%;
+                    background: rgba(255, 255, 255, 0.4);
+                    filter: blur(10px);
+                    opacity: 0;
+                    animation: flash .5s ease-out alternate infinite;
+                    content: '';
+                }
+            }
+        }
+
+        @keyframes flash {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes flashText {
+            to {
+                opacity: 0.15;
+            }
+        }
+    } // .animation_light_text
+
+    // 떠다니는 텍스트 효과
+    &_floating_text {
+        width: 100%;
+        min-height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: floating 5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+
+        &_wrap {
+            background: #e6eaad;
+            color: $point;
+            overflow: hidden;
+        } // .animation_floating_text_wrap
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            animation: tilting 10s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+        }
+
+        span {
+            transition: font-weight 0.4s ease-in;
+            animation: floating-secondary 2.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+
+            &:nth-child(1) {
+                animation-delay: 1s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: 2s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 3s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: 4s;
+            }
+
+            &:nth-child(5) {
+                animation-delay: 5s;
+            }
+
+            &:nth-child(6) {
+                animation-delay: 6s;
+            }
+
+            &:nth-child(7) {
+                animation-delay: 7s;
+            }
+
+            &:nth-child(8) {
+                animation-delay: 8s;
+            }
+
+            &:nth-child(9) {
+                animation-delay: 9s;
+            }
+        }
+
+        @keyframes floating {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 5vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes floating-secondary {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(0, 1vh);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes tilting {
+            0% {
+                transform: rotate(1deg);
+            }
+            50% {
+                transform: rotate(-1deg);
+            }
+            100% {
+                transform: rotate(1deg);
+            }
+        }
+    } // .animation_floating_text
+
+    // 슬라이드 효과
+    &_slide_text {
+        text-transform: uppercase;
+        line-height: 1;
+
+        &_wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $point;
+            width: 100%;
+            min-height: 350px;
+        } // .animation_slide_text_wrap
+
+        span {
+            text-align: center;
+            display: block;
+            width: 100%;
+            color: $white;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            transform: translateY(-50px);
+            opacity: 0;
+            animation-name: slidetext;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 0.6s;
+            -webkit-animation-fill-mode: forwards;
+
+            @keyframes slidetext {
+                0% {
+                    transform: translateY(-50px);
+                    opacity: 0;
+                    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+                }
+
+                20% {
+                    transform: translateY(0);
+                    opacity: 1;
+                    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+                }
+
+                80% {
+                    transform: translateY(0);
+                    opacity: 1;
+                    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+                }
+
+                100% {
+                    transform: translateY(50px);
+                    opacity: 0;
+                    clip-path: polygon(100% 0, 100% -0%, 0 100%, 0 100%);
+                }
+            }
+
+            &:first-child {
+                animation-delay: 0.7s;
+            }
+
+            &:last-child {
+                animation-delay: 0.5s;
+            }
+        }
+    } // .animation_slide_text
+
+    /* SVG */
+    // 라인 드로잉 효과
+    &_svg_line {
+        width: 200px;
+        fill: $point;
+
+        &_path {
+            fill-opacity: 0;
+            stroke: $black;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-dasharray: 860;
+            stroke-dashoffset: 860;
+            animation: draw 5s linear forwards infinite;
+
+            @keyframes draw {
+                to {
+                    fill-opacity: 1;
+                    stroke: $point;
+                    stroke-dashoffset: 0;
+                }
+            }
+        } // .animation_svg_line_path
+    } // .animation_svg_line
+
+    // 대시라인 효과
+    &_svg_dash_line {
+        width: 100%;
+        height: 100%;
+
+        &_wrap {
+            width: 404px;
+            height: 85px;
+        } // .animation_svg_dash_line_wrap
+
+
+        text {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            animation: stroke 5s infinite alternate;
+            stroke-width: 1;
+            stroke: $point;
+            font-size: 60px;
+            font-weight: bold;
+        }
+        @keyframes stroke {
+            0% {
+                fill: rgba(72,138,20,0);
+                stroke: rgba(97, 166, 14, 1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 1;
+            }
+
+            70%  {
+                fill: rgba(72,138,20,0);
+                stroke: rgba(97, 166, 14, 1);
+            }
+
+            80%  {
+                fill: rgba(72,138,20,0);
+                stroke: rgbargba(97, 166, 14, 1);
+                stroke-width: 2;
+            }
+
+            100% {
+                fill: rgba(97, 166, 14, 1);
+                stroke: rgba(97, 166, 14, 0);
+
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+                stroke-width: 0;
+            }
+        }
+    } // .animation_svg_dash_line
+}
+

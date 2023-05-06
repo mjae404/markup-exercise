@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>교보문고 PICKS - 마이페이지 영상 메인</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Web Storm">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="img/sns_bg.jpg">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="#">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta property="twitter:image" content="img/sns_bg.jpg">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./img/fav.ico">
+    <link rel="shortcut icon" href="./img/fav.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/picks.css">
+    <script src="js/swiper.js"></script>
+    <script src="js/m_header.js" defer></script>
+    <script src="js/m_footer.js" defer></script>
+    <script src="js/swiperSlider.js" defer></script>
+    <script src="js/myPage.js" defer></script>
+</head>
+
+<body id="body">
+    <div class="wrap">
+        @@include('include/_m_header.html')
+        <main class="main my">
+            @@include('include/_re_pattern_section.html')
+            <section class="area">
+                <div class="area_inner">
+                    <div class="area_title_wrap">
+                        <h2 class="area_title">
+                            <span class="nickname">김교보</span>님이 가장 선호하는 콘텐츠
+                        </h2>
+                    </div>
+                    <div class="slide_wrap">
+                        @@include('include/_re_video_swiper.html', {
+                            slideName: "myslider myslider01",
+                            slideList: [
+                                {image: "picks_video01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                            ]
+                        })
+                        @@include('include/_re_video_swiper.html', {
+                            slideName: "myslider myslider01",
+                            slideList: [
+                                {image: "picks_video05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                            ]
+                        })
+                    </div>
+                    <div class="area_button_wrap">
+                        <button type="button" class="area_button layer_button" data-target-layer="videoPopup">+ 더보기</button>
+                    </div>
+                </div>
+            </section>
+            <section class="area tab">
+                <div class="area_inner">
+                    <div class="area_title_wrap">
+                        <h2 class="area_title">
+                            <span class="nickname">김교보</span>님을 위한 Picks 종합 추천
+                        </h2>
+                    </div>
+                    @@include('include/_re_tab_list.html', {
+                        tabList: [
+                        {active: "active", id: "main_book", title: "도서"},
+                        {active: "", id: "main_gift", title: "기프트"},
+                        {active: "", id: "main_video", title: "영상"},
+                        {active: "", id: "main_ticket", title: "티켓"}
+                        ]
+                    })
+                    <div class="slide_wrap active" id="main_book">
+                        @@include('include/_re_basic_swiper.html', {
+                            category: "",
+                            slideName: "myslider myslider02",
+                            slideList: [
+                                {category: "도서", image: "picks_book_cover01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover06.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover07.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover08.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                            ]
+                        })
+                    </div>
+                    <div class="slide_wrap" id="main_gift">
+                        @@include('include/_re_basic_swiper.html', {
+                            category: "square gift",
+                            slideName: "myslider myslider02",
+                            slideList: [
+                                {category: "기프트", image: "picks_gift01.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift02.jpg", title: "The Scent of PAGE : 디퓨저 200ml", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift03.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift04.jpg", title: "The Scent of PAGE : 디퓨저 200ml", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift05.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"}
+                            ]
+                        })
+                    </div>
+                    <div class="slide_wrap" id="main_video">
+                        @@include('include/_re_video_swiper.html', {
+                        slideName: "myslider myslider01",
+                        slideList: [
+                        {image: "picks_video01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                        {image: "picks_video02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                        {image: "picks_video03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                        {image: "picks_video04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                        {image: "picks_video05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                        ]
+                        })
+                    </div>
+                    <div class="slide_wrap" id="main_ticket">
+                        @@include('include/_re_basic_swiper.html', {
+                        category: "ticket",
+                        slideName: "myslider myslider02",
+                        slideList: [
+                        {category: "티켓", image: "picks_ticket01.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"},
+                        {category: "티켓", image: "picks_ticket02.jpg", title: "[윤동주문학기행] 별이 된 시인, 윤동주", text: "여행/체험"},
+                        {category: "티켓", image: "picks_ticket03.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"},
+                        {category: "티켓", image: "picks_ticket04.jpg", title: "[윤동주문학기행] 별이 된 시인, 윤동주", text: "여행/체험"},
+                        {category: "티켓", image: "picks_ticket05.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"}
+                        ]
+                        })
+                    </div>
+                    <div class="area_button_wrap">
+                        <button type="button" class="area_button layer_button" data-target-layer="picksPopup">+ 더보기</button>
+                    </div>
+                </div>
+            </section>
+            <section class="area">
+                <div class="area_inner">
+                    <div class="area_title_wrap">
+                        <h2 class="area_title">
+                            <span class="nickname">김교보</span>님은 <br aria-hidden="true"><span class="keyword">유아/아동</span> 콘텐츠 좋아하니까...!
+                        </h2>
+                    </div>
+                    <div class="slide_wrap">
+                        @@include('include/_re_basic_swiper.html', {
+                            category: "ticket",
+                            slideName: "myslider myslider02",
+                            slideList: [
+                                {category: "티켓", image: "picks_ticket01.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"},
+                                {category: "티켓", image: "picks_ticket02.jpg", title: "[윤동주문학기행] 별이 된 시인, 윤동주", text: "여행/체험"},
+                                {category: "티켓", image: "picks_ticket03.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"},
+                                {category: "티켓", image: "picks_ticket04.jpg", title: "[윤동주문학기행] 별이 된 시인, 윤동주", text: "여행/체험"},
+                                {category: "티켓", image: "picks_ticket05.jpg", title: "[교보아트스페이스] 으스스展", text: "전시"}
+                            ]
+                        })
+                        @@include('include/_re_basic_swiper.html', {
+                            category: "square gift",
+                            slideName: "myslider myslider02",
+                            slideList: [
+                                {category: "기프트", image: "picks_gift01.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift02.jpg", title: "The Scent of PAGE : 디퓨저 200ml", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift03.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift04.jpg", title: "The Scent of PAGE : 디퓨저 200ml", text: "시그니처향"},
+                                {category: "기프트", image: "picks_gift05.jpg", title: "The Scent of PAGE : 부케북 에디션 (Happy Day)", text: "시그니처향"}
+                            ]
+                        })
+                    </div>
+                    <div class="area_button_wrap">
+                        <button type="button" class="area_button layer_button" data-target-layer="basicPopup1">+ 더보기</button>
+                    </div>
+                </div>
+            </section>
+            <section class="area">
+                <div class="area_inner">
+                    <div class="area_title_wrap">
+                        <h2 class="area_title">
+                            <span class="nickname"><span class="keyword">라이프스타일</span> 콘텐츠는 어떠세요?
+                        </h2>
+                    </div>
+                    <div class="slide_wrap">
+                        @@include('include/_re_video_swiper.html', {
+                            slideName: "myslider myslider01",
+                            slideList: [
+                                {image: "picks_video05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {image: "picks_video01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                            ]
+                        })
+                        @@include('include/_re_basic_swiper.html', {
+                            category: "",
+                            slideName: "myslider myslider02",
+                            slideList: [
+                                {category: "도서", image: "picks_book_cover08.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover07.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover06.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover05.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover04.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover03.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover02.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"},
+                                {category: "도서", image: "picks_book_cover01.jpg", title: "여행 크리에이터가 되기 위한 첫걸음", text: "내 여행의 기록법"}
+                            ]
+                        })
+                    </div>
+                    <div class="area_button_wrap">
+                        <button type="button" class="area_button layer_button" data-target-layer="basicPopup2">+ 더보기</button>
+                    </div>
+                </div>
+            </section>
+            <section class="area">
+                <div class="area_inner">
+                    <div class="area_title_wrap">
+                        <h2 class="area_title">
+                            더 정확한 Picks <br aria-hidden="true">
+                            콘텐츠 추천이 필요하신가요?
+                        </h2>
+                        <p class="area_text">수많은 콘텐츠가 회원님의 평가를 기다리고 있어요!</p>
+                    </div>
+                    <div class="area_image_wrap">
+                        <img src="./img/picks/picks_books.png" alt="" class="area_image">
+                    </div>
+                    <button type="button" class="basic_button layer_button" data-target-layer="choosePopup">Picks 추천 평가 늘리러 가기</button>
+                </div>
+            </section>
+        </main>
+        @@include('include/_m_footer.html')
+        @@include('include/_m_docker_menu.html')
+    </div>
+    <section id="videoPopup" class="layer layer_mypage layer_basic">
+        <div class="layer_inner">
+            <div class="layer_title_wrap">
+                <h2 class="layer_title">
+                    <span class="nickname">김교보</span>님이 가장 선호하는 콘텐츠
+                </h2>
+            </div>
+            <div class="layer_contents_wrap">
+                <div class="layer_tab_contents video">
+                    @@include('include/_re_layer_video_list.html')
+                </div>
+            </div>
+            <div class="layer_button_close_wrap">
+                <button type="button" class="layer_button_close" data-target-layer="videoPopup">
+                    <span class="blind">닫기 버튼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="basicPopup1" class="layer layer_mypage layer_recommend_total">
+        <div class="layer_inner">
+            <div class="layer_title_wrap">
+                <h2 class="layer_title">
+                    <span class="nickname">김교보</span>님은 <span class="keyword">유아/아동</span> 콘텐츠 좋아하니까...!
+                </h2>
+            </div>
+            <div class="layer_contents_wrap">
+                @@include('include/_re_tab_list.html', {
+                    tabList: [
+                        {active: "active", id: "basicBook", title: "도서"},
+                        {active: "", id: "basicGift", title: "기프트"},
+                        {active: "", id: "basicVideo", title: "영상"},
+                        {active: "", id: "basicTicket", title: "티켓"}
+                    ]
+                })
+                <div class="layer_tab_contents active basic" id="basicBook">
+                    @@include('include/_re_layer_basic_list.html')
+                </div>
+                <div class="layer_tab_contents gift" id="basicGift">
+                    @@include('include/_re_layer_square_list.html')
+                </div>
+                <div class="layer_tab_contents video" id="basicVideo">
+                    @@include('include/_re_layer_video_list.html')
+                </div>
+                <div class="layer_tab_contents ticket" id="basicTicket">
+                    @@include('include/_re_layer_ticket_list.html')
+                </div>
+            </div>
+            <div class="layer_button_close_wrap">
+                <button type="button" class="layer_button_close" data-target-layer="basicPopup1">
+                    <span class="blind">닫기 버튼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="basicPopup2" class="layer layer_mypage layer_recommend_total">
+        <div class="layer_inner">
+            <div class="layer_title_wrap">
+                <h2 class="layer_title">
+                    <span class="keyword">라이프스타일</span> 콘텐츠는 어떠세요?
+                </h2>
+            </div>
+            <div class="layer_contents_wrap">
+                @@include('include/_re_tab_list.html', {
+                    tabList: [
+                        {active: "active", id: "basicBook2", title: "도서"},
+                        {active: "", id: "basicGift2", title: "기프트"},
+                        {active: "", id: "basicVideo2", title: "영상"},
+                        {active: "", id: "basicTicket2", title: "티켓"}
+                    ]
+                })
+                <div class="layer_tab_contents active basic" id="basicBook2">
+                    @@include('include/_re_layer_basic_list.html')
+                </div>
+                <div class="layer_tab_contents gift" id="basicGift2">
+                    @@include('include/_re_layer_square_list.html')
+                </div>
+                <div class="layer_tab_contents video" id="basicVideo2">
+                    @@include('include/_re_layer_video_list.html')
+                </div>
+                <div class="layer_tab_contents ticket" id="basicTicket2">
+                    @@include('include/_re_layer_ticket_list.html')
+                </div>
+            </div>
+            <div class="layer_button_close_wrap">
+                <button type="button" class="layer_button_close" data-target-layer="basicPopup2">
+                    <span class="blind">닫기 버튼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="picksPopup" class="layer layer_mypage layer_recommend_total">
+        <div class="layer_inner">
+            <div class="layer_title_wrap">
+                <h2 class="layer_title">
+                    <span class="nickname">김교보</span>님을 위한 Picks 종합 추천
+                </h2>
+            </div>
+            <div class="layer_contents_wrap">
+                @@include('include/_re_tab_list.html', {
+                    tabList: [
+                        {active: "active", id: "book", title: "도서"},
+                        {active: "", id: "gift", title: "기프트"},
+                        {active: "", id: "video", title: "영상"},
+                        {active: "", id: "ticket", title: "티켓"}
+                    ]
+                })
+                <div class="layer_tab_contents active basic" id="book">
+                    @@include('include/_re_layer_basic_list.html')
+                </div>
+                <div class="layer_tab_contents gift" id="gift">
+                    @@include('include/_re_layer_square_list.html')
+                </div>
+                <div class="layer_tab_contents video" id="video">
+                    @@include('include/_re_layer_video_list.html')
+                </div>
+                <div class="layer_tab_contents ticket" id="ticket">
+                    @@include('include/_re_layer_ticket_list.html')
+                </div>
+            </div>
+            <div class="layer_button_close_wrap">
+                <button type="button" class="layer_button_close" data-target-layer="picksPopup">
+                    <span class="blind">닫기 버튼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="keywordsPopup" class="layer layer_keyword">
+        <div class="layer_inner">
+            <div class="layer_title_wrap">
+                <h2 class="layer_title">나를 위한 키워드 재설정</h2>
+            </div>
+            <div class="layer_contents_wrap">
+                <div class="layer_keyword_content_wrap">
+                    <div class="layer_keyword_text_area">
+                        <span class="layer_keyword_text_sub">키워드 추천 상품이 <br aria-hidden="true"/>마음에 들지 않으셨나요?</span>
+                        <strong class="layer_keyword_text_main">나를 위한 <br aria-hidden="true"/>키워드 상품으로 재설정해보세요</strong>
+                    </div>
+                    <div class="layer_keyword_image_area">
+                        <img src="./img/picks/picks_keywords_character.png" class="layer_keyword_image">
+                    </div>
+                </div>
+                <ul class="layer_keyword_list">
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">교양</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input type="checkbox" id="toggle01" />
+                                <label for="toggle01"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">학습</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle02" />
+                                <label for="toggle02"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">자기계발</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input type="checkbox" id="toggle03" />
+                                <label for="toggle03"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">디지털/IT</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle04" />
+                                <label for="toggle04"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">라이프 스타일</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle05" />
+                                <label for="toggle05"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">패션/쇼핑</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle06" />
+                                <label for="toggle06"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">유아/아동</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle07" />
+                                <label for="toggle07"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">문화/예술</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle08" />
+                                <label for="toggle08"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">문화/음악</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle09" />
+                                <label for="toggle09"></label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="layer_keyword_item">
+                        <div class="layer_keyword_text_wrap">
+                            <span class="layer_keyword_text">건강/뷰티</span>
+                        </div>
+                        <div class="layer_keyword_toggle_wrap">
+                            <div class="layer_keyword_toggle">
+                                <input checked type="checkbox" id="toggle10" />
+                                <label for="toggle10"></label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="layer_button_close_wrap">
+                <button type="button" class="layer_button_close" data-target-layer="keywordsPopup">
+                    <span class="blind">닫기 버튼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    @@include('include/_re_layer_choose.html')
+</body>
+</html>

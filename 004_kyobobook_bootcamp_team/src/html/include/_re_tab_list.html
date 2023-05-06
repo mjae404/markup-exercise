@@ -1,0 +1,9 @@
+<div class="swiper area_tab_list_wrapper">
+    <ul class="swiper-wrapper area_tab_list">
+        @@for (var i = 0; i < tabList.length; i++) {
+            <li class="swiper-slide area_tab_item `+tabList[i].active+`" data-panel="`+tabList[i].id+`">
+                <button type="button" class="area_tab_button">`+tabList[i].title+`</button>
+            </li>
+        }
+    </ul>
+</div>

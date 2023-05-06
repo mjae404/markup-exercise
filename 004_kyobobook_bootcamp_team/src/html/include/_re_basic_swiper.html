@@ -1,0 +1,20 @@
+<div class="basic_swiper_wrap @@category">
+    <div class="swiper basic_swiper basic @@slideName">
+        <div class="swiper-wrapper">
+            @@for (var i = 0; i < slideList.length; i++) {
+                <div class="swiper-slide basic_slide">
+                    <a href="#" class="basic_link" target="_blank">
+                        <div class="basic_thumbnail_wrap">
+                            <span class="contents_thumbnail_label">`+slideList[i].category+`</span>
+                            <img src="./img/picks/`+slideList[i].image+`" class="basic_thumbnail_image">
+                        </div>
+                        <div class="contents_text_wrap">
+                            <strong class="contents_text_title">`+slideList[i].title+`</strong>
+                            <p class="contents_text">`+slideList[i].text+`</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

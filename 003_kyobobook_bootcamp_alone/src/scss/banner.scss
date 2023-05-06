@@ -1,0 +1,99 @@
+@import "include/variables";
+@import "include/mixin";
+
+.banner {
+  width: 100%;
+
+  &_link {
+    position: relative;
+    display: inline-block;
+    color: $black;
+    width: 100%;
+    vertical-align: top;
+  } // .banner_link
+
+  &_img_area {
+    &  ~ .banner_text_area {
+      border-top: 1px solid #ccc;
+    }
+  } // .banner_img_area
+
+  &_text_area {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    color: $white;
+    box-sizing: border-box;
+  } // .banner_text_area
+
+  &_title {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    @include line-clamp(2, 20px);
+  } // .banner_title
+
+  &_close {
+    &_button {
+      position: relative;
+      width: 26px;
+      height: 26px;
+      color: transparent;
+      overflow: hidden;
+      background-color: $black;
+  
+      &::before,
+      &::after {
+        z-index: 10;
+        height: 15px;
+        width: 1px;
+        background-color: $white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content:'';
+      }
+  
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+  
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    } // .banner_close_button
+
+    &_area {
+      position: absolute;
+      left: 0;
+      top: 0;
+    } // .banner_close_area
+  }
+
+  &_wrap {
+    width: 100%;
+    max-width: 35%;
+    position: fixed;
+    bottom: 30%;
+    right: -100%;
+    transition: right 0.4s;
+    z-index: 1050;
+    display: none;
+
+    @media screen and (min-width: 992px) {
+      max-width: 15%;
+      bottom: 15%;
+    }
+
+    &.fixed {
+      right: 0;
+    }
+
+    &.active {
+      display: block;
+    }
+  }// .banner_wrap
+}

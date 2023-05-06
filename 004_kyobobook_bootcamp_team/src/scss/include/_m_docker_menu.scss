@@ -1,0 +1,111 @@
+.docker_menu {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 576px;
+  width: 100%;
+  z-index: 100;
+  transition: bottom 1s;
+
+  &.fixed {
+    bottom: 0;
+    transition: bottom 0.5s;
+  }
+
+  &_list {
+    display: flex;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 136px;
+      height: 74px;
+      background-size: 136px 74px;
+      transform: translateX(-50%);
+      background-image: url("../img/docker_bg.png");
+      content: '';
+    }
+  } // .docker_menu_list
+
+  &_item {
+    flex: 1;
+    z-index: 1;
+
+    &:not(.my_page) {
+      border-top: 1px solid #ccc;
+      background-color: #fff;
+    }
+
+    &.my_page {
+      position: relative;
+      text-align: center;
+      max-width: 136px;
+    }
+  } // .docker_menu_item
+
+  &_button {
+    display: inline-block;
+    width: 100%;
+    padding: 16px 0 18px;
+    vertical-align: top;
+    box-sizing: border-box;
+
+    @at-root .my_page & {
+      overflow: hidden;
+      display: inline-block;
+      width: 61px;
+      height: 61px;
+      padding: 0;
+      margin: 0 23px;
+      vertical-align: top;
+      border-radius: 100%;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 0 0;
+
+      @at-root .main & {
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        background-image: url("../img/docker_home.png");
+      }
+
+      @at-root .search & {
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        background-image: url("../img/docker_search.png");
+      }
+
+      @at-root .my_page & {
+        width: 61px;
+        height: 61px;
+        background-size: 61px 61px;
+        background-image: url("../img/docker_my_page.png");
+      }
+
+      @at-root .history & {
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        background-image: url("../img/docker_history.png");
+      }
+
+      @at-root .menu & {
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px;
+        background-image: url("../img/docker_menu.png");
+      }
+    }
+  } // .docker_menu_button
+}

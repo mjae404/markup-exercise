@@ -1,0 +1,20 @@
+<div class="video_swiper_wrap">
+    <div class="swiper video_swiper video @@slideName">
+        <div class="swiper-wrapper">
+            @@for (var i = 0; i < slideList.length; i++) {
+                <div class="swiper-slide video_slide">
+                    <a href="#" class="video_link" target="_blank">
+                        <div class="video_thumbnail_wrap">
+                            <span class="contents_thumbnail_label">영상</span>
+                            <img src="./img/picks/`+slideList[i].image+`" class="video_thumbnail_image">
+                        </div>
+                        <div class="contents_text_wrap">
+                            <strong class="contents_text_title">`+slideList[i].title+`</strong>
+                            <p class="contents_text">`+slideList[i].text+`</p>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교보문고 개별 과제 - 김민지</title>
+    <link rel="shortcut icon" href="./img/fav.ico">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+@@include('include/_header.html')
+<div class="container">
+    @@include('include/_aside.html')
+    <main class="main_contents">
+        <div class="mobile_wrap device_wrap">
+            <iframe id="animation_bell" src="animation_bell.html"></iframe>
+            @@include('include/_new_tab_link.html', {
+                "link": "animation_bell.html"
+            })
+        </div>
+    </main>
+</div>
+@@include('include/_footer.html')
+</body>
+</html>

@@ -1,0 +1,696 @@
+@import "include/variables"; // 변수
+@import "include/mixin"; // 믹스인
+@import "sprite"; // 스프라이트
+@import "include/reset"; // 리셋
+@import "include/swiper"; // 스와이퍼 슬라이드
+
+.task_container {
+  position: relative;
+  padding-bottom: 56px;
+}
+
+// 헤더
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px 15px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &_area {
+    display: flex;
+  } // header_area
+
+  &_logo {
+    width: 56px;
+    height: 40px;
+    vertical-align: top;
+    margin-top: -10px;
+
+    &_wrap {
+      position: relative;
+      padding-right: 30px;
+    } // .header_logo_wrap
+  } // .header_logo
+
+  &_site_more {
+    &_button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      display: inline-block;
+      background-color: rgba(0, 0, 0, .6);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+
+      &.on {
+        background-color: rgba(255, 255, 255, .6);
+
+        &::after {
+          border-color: $black;
+          top: calc(50% + 1px);
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 2px);
+        left: 50%;
+        width: 4px;
+        height: 4px;
+        border-width: 1px 1px 0 0;
+        border-style: solid;
+        border-color: $white;
+        transform: translate(-50%, -50%) rotate(135deg);
+        content: '';
+      }
+    } // .header_site_more_button
+
+    &_list {
+      display: none;
+      position: absolute;
+      top: 46px;
+      left: -5px;
+      padding: 10px 0;
+      background: $white;
+      border-radius: 10px;
+      box-shadow: 3px 4px 7px 0 rgb(0 0 0 / 10%);
+      z-index: 101;
+      min-width: 150px;
+
+      &.on {
+        display: block;
+      }
+    } // .header_site_more_list
+
+    &_link {
+      position: relative;
+      color: #222;
+      display: block;
+      padding: 8px 15px 8px 40px;
+
+      &::before {
+        display: block;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+      }
+
+      // 스프라이트스미스의 경우 $ 기호 사용으로 SCSS 함수 사용 불가
+      @at-root .kyobobook & {
+        &::before {
+          @include sprite($kyobobook);
+        }
+      }
+
+      @at-root .kyobo-store & {
+        &::before {
+          @include sprite($kyobo-store);
+        }
+      }
+
+      @at-root .ebook & {
+        &::before {
+          @include sprite($ebook);
+        }
+      }
+
+      @at-root .ebook-sam & {
+        &::before {
+          @include sprite($ebook-sam);
+        }
+      }
+
+      @at-root .tocsoda & {
+        &::before {
+          @include sprite($tocsoda);
+        }
+      }
+
+      @at-root .used & {
+        &::before {
+          @include sprite($used);
+        }
+      }
+
+      @at-root .morning & {
+        &::before {
+          @include sprite($morning);
+        }
+      }
+
+      @at-root .story & {
+        &::before {
+          @include sprite($story);
+        }
+      }
+    } // .header_site_more_link
+  } // .header_site_more
+
+  &_search {
+    &_input {
+      background: rgba(0,0,0,.4);
+      color: $white;
+      padding: 10px 35px 10px 10px;
+      border-radius: 50px;
+      border: none;
+      font-size: 12px;
+      box-sizing: border-box;
+      @include ellipsis;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, .6);
+
+      }
+    } // .header_serach_input
+
+    &_button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      @include sprite($search);
+    } // .header_serach_button
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+      position: relative;
+      flex: 1;
+    } // .header_serach_wrap
+  }
+
+  &_button {
+    &_cart {
+      display: block;
+      @include sprite($cart);
+    } // .header_button_cart
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+    } // .header_button_wrap
+  }
+
+  &_category {
+    &_list {
+      display: flex;
+      overflow-x: auto;
+      margin: 10px -15px 0 -15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    } // .header_category_list
+
+    &_text {
+      position: relative;
+      display: inline-block;
+      padding: 0 15px;
+      color: $white;
+      font-size: 16px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        width: 0;
+        height: 4px;
+        background: $white;
+        border-radius: 5px;
+        transition: all .3s;
+        content: '';
+      }
+
+      &:hover::after {
+        left: 7px;
+        right: 7px;
+        width: auto;
+      }
+    } // .header_category_text
+  }
+}
+
+// 퀵메뉴
+.quick_tab {
+  &_wrap {
+    overflow: hidden;
+    background: $white;
+    box-shadow: 0 6px 6px 0 rgb(0 0 0 / 10%);
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+  } // .quick_tab_wrap
+
+  &_list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 10px 20px 10px;
+  } // .quick_tab_list
+
+  &_item {
+    width: 20%;
+    margin-top: 10px;
+  } // .quick_tab_item
+
+  &_link {
+    width: 100%;
+    position: relative;
+    padding-top: 60px;
+    display: block;
+    color: $darkgray;
+    font-size: 12px;
+    text-align: center;
+    word-break: break-all;
+
+    &::before,
+    &::after {
+      position: absolute;
+      transform: translateX(-50%);
+      display: block;
+      content: '';
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: #f6f6f9;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+    }
+
+    &::after {
+      top: 10px;
+      left: 50%;
+    }
+
+    @at-root .benefit & {
+      &::after {
+        @include sprite($tab-benefit);
+      }
+    }
+
+    @at-root .chulcheck & {
+      &::after {
+        @include sprite($tab-chulcheck);
+      }
+    }
+
+    @at-root .shop & {
+      &::after {
+        @include sprite($tab-shop);
+      }
+    }
+
+    @at-root .pickup & {
+      &::after {
+        @include sprite($tab-pickup);
+      }
+    }
+
+    @at-root .checkin & {
+      &::after {
+        @include sprite($tab-checkin);
+      }
+    }
+
+    @at-root .gift & {
+      &::after {
+        @include sprite($tab-gift);
+      }
+    }
+
+    @at-root .collection & {
+      &::after {
+        @include sprite($tab-collection);
+      }
+    }
+
+    @at-root .bookstore & {
+      &::after {
+        @include sprite($tab-bookstore);
+      }
+    }
+
+    @at-root .ebook & {
+      &::after {
+        @include sprite($tab-ebook);
+      }
+    }
+
+    @at-root .all & {
+      &::after {
+        @include sprite($tab-all);
+      }
+    }
+  } // .quick_tab_link
+}
+
+// 실시간 검색어
+.hot_word {
+  &_wrap {
+    position: relative;
+    display: flex;
+    padding: 30px 20px;
+    background:#f0f0f0;
+  } // .hot_word_wrap
+
+  &_title {
+    width: 100px;
+  } // .hot_word_title
+
+  &_text {
+    display: inline-block;
+
+    &:first-child {
+      position: relative;
+      margin-bottom: 5px;
+
+      &::after {
+        display: block;
+        position: absolute;
+        right: -26px;
+        top: -10px;
+        @include sprite ($point-shop);
+        content: '';
+      }
+    }
+  } // .hot_word_text
+
+  &_item {
+    position: absolute;
+    top: -45px;
+    left: 0;
+
+    &.prev {
+      top: -45px;
+      transition: top 0.5s ease;
+    }
+
+    &.current {
+      top: 0;
+      transition: top 0.5s ease;
+    }
+
+    &.next {
+      top: 45px;
+    }
+  } // .hot_word_item
+
+  &_list_wrap {
+    position: relative;
+    background-color: $white;
+    height: 45px;
+    overflow: hidden;
+    flex: 1;
+  } // .hot_word_list_wrap
+
+  &_link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $black;
+    padding: 0 10px;
+    box-sizing: border-box;
+    @include line-clamp(1, 45px);
+  } // .hot_word_link
+
+  &_ranking {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background: $gray;
+    border-radius: 50%;
+    color: $white;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+
+    &.em {
+      background: $point;
+    }
+  } // .hot_word_ranking
+}
+
+// 스와이퍼 슬라이드
+.swiper {
+  &-slide img {
+    vertical-align: middle;
+  } // .swiper-slide img
+
+  &_main {
+    text-align: center;
+    max-height: 480px;
+
+    .swiper-slide img {
+      width: 100%;
+      vertical-align: middle;
+      padding-top: 112px;
+      max-width: 480px;
+    }
+
+    &_wrap {
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+    } // .swiper_main_wrap
+  } // .swiper_main
+
+  &_button {
+    &_wrap {
+      display: flex;
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+    } // .swiper_button_wrap
+
+    &_pagination {
+      position: relative;
+      width: 72px;
+      height: 22px;
+      border-radius: 11px;
+      padding-right: 20px;
+      background-color: $swiperButtonBackColor;
+      z-index: 10;
+      box-sizing: border-box;
+
+      .swiper-pagination-fraction {
+        width: 52px;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        font-size: 12px;
+
+        .swiper-pagination-current {
+          font-weight: bold;
+        }
+      }
+    } // .swiper_button_pagination
+
+    &_all {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      width: 22px;
+      height: 22px;
+      background-color: $swiperButtonBackColor;
+      border-radius: 50%;
+
+      &::before,
+      &::after {
+        display: block;
+        @include position-center;
+        background-color: $black;
+        content: '';
+      }
+
+      &::before {
+        width: 10px;
+        height: 2px;
+      }
+
+      &::after {
+        width: 2px;
+        height: 10px;
+      }
+    } // .swiper_button_all
+
+    &_play {
+      vertical-align: top;
+      position: relative;
+      width: 22px;
+      height: 22px;
+      background-color: $swiperButtonBackColor;
+      border-radius: 50%;
+      z-index: 10;
+      margin-left: 5px;
+
+      &::after {
+        display: block;
+        @include position-center;
+        @include sprite($play);
+        content: '';
+      }
+
+      &.on::after {
+        @include sprite($pause);
+      }
+    } // .swiper_button_play
+  }
+
+  &_book_list_wrap {
+    .book_list {
+      margin-bottom: 15px;
+    }
+
+    .swiper-scrollbar {
+      bottom: 0;
+    }
+  }
+} // .swiper_book_list_wrap
+
+// 네비게이션바
+.navbar {
+  &_container {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 100vw;
+    height: 56px;
+    background-color: $white;
+    z-index: 1000;
+    box-shadow: 0px 0px 55px 0 rgb(0 0 0 / 10%);
+  } // .navbar_container
+
+  &_list {
+    display: flex;
+  } // .navbar_list
+
+  &_item {
+    width: 25%;
+  } // .navbar_item
+
+  &_link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 56px;
+
+    &::before {
+      display: block;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+    }
+
+    @at-root .all & {
+      &::before {
+        @include sprite($navbar-all);
+      }
+    }
+
+    @at-root .search & {
+      &::before {
+        @include sprite($navbar-search);
+      }
+    }
+
+    @at-root .home & {
+      &::before {
+        @include sprite($navbar-home);
+      }
+    }
+
+    @at-root .mypage & {
+      &::before {
+        @include sprite($navbar-mypage);
+      }
+    }
+  } // .navbar_link
+
+  &_thumbnails {
+    width: 28px;
+    height: 28px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid $gray;
+    box-sizing: border-box;
+  } // .navbar__thumbnails
+}
+
+// 책 리스트 슬라이드
+.book_list {
+  &_wrap {
+    padding: 15px;
+
+    .section_title {
+      margin-bottom: 20px;
+    }
+
+    &:not(:last-of-type) {
+      position: relative;
+      padding-bottom: 30px;
+
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: $gray;
+        content: '';
+      }
+    }
+  } // .book_list_wrap
+
+  &_thumbnail {
+    width: 100%;
+
+    &_wrap {
+      border: 1px solid $gray;
+    } // .book_list_thumbnail_wrap
+  } // .book_list_thumbnail
+
+  &_title {
+    display: block;
+    color: $black;
+    @include line-clamp(2, 20px);
+
+    &_wrap {
+      margin-top: 10px;
+    } // .book_list_title_wrap
+  } // .book_list_title
+}

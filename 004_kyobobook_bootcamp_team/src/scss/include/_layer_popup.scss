@@ -1,0 +1,226 @@
+.layer {
+  &_recommend_total {
+    .area_tab {
+      &_button {
+        font-size: 14px;
+      } // .area_tab_button
+    }
+
+    .layer_tab_contents {
+      margin: 0 -5px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .layer_contents_wrap {
+      padding-bottom: 20px;
+      font-size: 0;
+    }
+  } // .layer_popup
+
+  &_list_item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &.basic {
+      display: inline-block;
+      width: 33.33%;
+      padding: 0 5px;
+      box-sizing: border-box;
+
+      .contents_thumbnail_label {
+        z-index: 10;
+      }
+
+      .basic_thumbnail {
+        &_wrap {
+          width: 100%;
+          height: auto;
+          padding-top: 138%;
+          position: relative;
+        } // .basic_thumbnail_wrap
+
+        &_image {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        } // .basic_thumbnail_image
+      }
+    }
+
+    &.square {
+      display: inline-block;
+      width: 50%;
+      padding: 0 5px;
+      box-sizing: border-box;
+
+      .basic_thumbnail {
+        &_wrap {
+          width: 100%;
+          height: auto;
+
+          @media screen and (min-width: 576px) {
+            padding-top: 100%;
+          }
+        } // .basic_thumbnail_wrap
+
+        &_image {
+          width: 100%;
+        } // .basic_thumbnail_image
+      }
+    }
+
+    @at-root .video & {
+      padding: 0 5px;
+    }
+  } // .layer_list_item
+
+  &_keyword {
+    &_content_wrap {
+      position: relative;
+      background-color: $primary_blue4;
+      border-radius: 10px 0px 0px 10px;
+      margin-right: -15px;
+      margin-top: 15.38vw;
+
+      @media screen and (min-width: 576px) {
+        margin-top: 60px;
+      }
+    } // .layer_keyword_conotent_wrap
+
+    &_text {
+      &_main {
+        font-weight: 500;
+        font-size: 5.64vw;
+        line-height: 7.69vw;
+        letter-spacing: -0.025em;
+        color: $text1;
+        display: block;
+        word-break: keep-all;
+
+        @media screen and (min-width: 400px) {
+          font-size: 22px;
+          line-height: 30px;
+          letter-spacing: -0.025em;
+        }
+      }
+
+      &_sub {
+        display: block;
+        font-weight: 400;
+        font-size: 3.59vw;
+        line-height: 140%;
+        letter-spacing: -0.025em;
+        color: $text_point_blue;
+        margin-bottom: 2.56vw;
+        word-break: keep-all;
+
+        @media screen and (min-width: 400px) {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      } // .layer_keyword_text_sub
+
+      &_area {
+        padding: 20px;
+        box-sizing: border-box;
+        width: 60%;
+      } // .layer_keyword_text_area
+    } // .layer_keyword_text
+
+    &_image {
+      height: 56.41vw;
+
+      @media screen and (min-width: 400px) {
+        height: 220px;
+      }
+
+      &_area {
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+      } // .layer_keyword_image_area
+    } // .layer_keyword_image
+
+    &_list {
+      margin-top: 40px;
+    }// .layer_keyword_list
+
+    &_item {
+      background: $gray3;
+      border-radius: 10px;
+      padding: 17px 20px;
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    } // .layer_keyword_item
+
+    &_text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.408px;
+      color: $text1;
+
+      &_wrap {
+        flex: 1;
+      }
+    } // .layer_keyword_text
+
+    &_toggle {  
+      label {
+        position: relative;
+        display: inline-block;
+        width: 46px;
+        height: 24px;
+        background-color: $text4;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        
+        &:before {
+          content: "";
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          height: 18px;
+          width: 18px;
+          background-color: #fff;
+          border-radius: 46px;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    
+      input {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+    
+        &:checked + label {
+          background-color: $primary_green2;
+          
+          &:before {
+            transform: translateX(22px);
+          }
+        }
+      }
+    } // .layer_keyword_toggle
+  }
+
+  &_mypage {
+    .layer_contents_wrap {
+      padding-top: 76px;
+    }
+  }// .layer_keyword_mypage
+}
